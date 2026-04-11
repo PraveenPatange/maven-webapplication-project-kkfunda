@@ -4,99 +4,127 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Praveen Pathange Home Page</title>
-<link href="images/kkfunda.jpg" rel="icon">
-<!-- Bootstrap CDN -->
+<title>Praveen DevOps Portal</title>
+
+<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
-    body {
-        background: #f9f9f9;
-        font-family: Arial, sans-serif;
-    }
-    header {
-        background: linear-gradient(90deg, #007bff, #00c6ff);
-        color: white;
-        padding: 20px;
-        text-align: center;
-    }
-    h1, h3 {
-        margin: 10px 0;
-    }
-    .info-card {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-        padding: 20px;
-        margin: 20px auto;
-        max-width: 700px;
-    }
-    footer {
-        margin-top: 30px;
-        background: #222;
-        color: white;
-        padding: 15px;
-        text-align: center;
-    }
-    footer a {
-        color: #00c6ff;
-        text-decoration: none;
-    }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Card Style */
+.info-card {
+    background: rgba(255,255,255,0.9);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 750px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn-custom {
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    border: none;
+    color: white;
+}
+
+.btn-custom:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    background: #1e1e2f;
+    color: #ccc;
+    padding: 15px;
+    text-align: center;
+}
+footer a {
+    color: #00c6ff;
+}
 </style>
+
 </head>
+
 <body>
 
 <header>
-    <h1>🚀 Welcome to Praveen Pathange CHANNEL NEW BATCH ON Apr 20th</h1>
-    <h3>Training | Development For Devops GCP SRE| Consulting</h3>
+    <h1>🚀 DevOps Training Portal</h1>
+    <p>GCP | AWS | SRE | Real-Time Training</p>
 </header>
 
 <div class="container">
 
     <!-- Server Info -->
     <div class="info-card">
-        <h3>🌐 Server Side Information</h3>
+        <h4>🌐 Server Info</h4>
         <hr>
         <%
             InetAddress inetAddress = InetAddress.getLocalHost();
-            String ip = inetAddress.getHostAddress();
-            out.println("<p><b>Server Host Name:</b> " + inetAddress.getHostName() + "</p>");
-            out.println("<p><b>Server IP Address:</b> " + ip + "</p>");
         %>
+        <p><b>Host:</b> <%= inetAddress.getHostName() %></p>
+        <p><b>IP:</b> <%= inetAddress.getHostAddress() %></p>
     </div>
 
     <!-- Client Info -->
     <div class="info-card">
-        <h3>💻 Client Side Information</h3>
+        <h4>💻 Client Info</h4>
         <hr>
-        <p><b>Client IP Address:</b> <%= request.getRemoteAddr() %></p>
-        <p><b>Client Host Name:</b> <%= request.getRemoteHost() %></p>
+        <p><b>Client IP:</b> <%= request.getRemoteAddr() %></p>
+        <p><b>Client Host:</b> <%= request.getRemoteHost() %></p>
     </div>
 
-    <!-- Contact Info -->
+    <!-- Contact -->
     <div class="info-card text-center">
-        <img src="images/kkfunda.jpg" alt="KK FUNDA Logo" width="120" class="mb-3 rounded-circle shadow">
+        <img src="images/kkfunda.jpg" loading="lazy" width="110"
+             class="rounded-circle shadow mb-3">
         <h4>KK FUNDA</h4>
-        <p><b>Address:</b> Kukatpally, Hyderabad</p>
-        <p><b>Phone:</b> +91-9951232881</p>
-        <p><b>Email:</b> <a href="mailto::praveenrao556@gmail.com">:praveenrao556@gmail.com</a></p>
-        <a href="mailto:praveenrao556@gmail.com" class="btn btn-primary mt-2">📧 Mail to KK FUNDA</a>
+        <p>📍 Kukatpally, Hyderabad</p>
+        <p>📞 +91-9951232881</p>
+
+        <!-- FIXED email bug -->
+        <a href="mailto:praveenrao556@gmail.com" class="btn btn-custom mt-2">
+            📧 Contact Us
+        </a>
     </div>
 
-    <!-- Service Links -->
+    <!-- Services -->
     <div class="info-card text-center">
-        <h4>⚙️ Our Services</h4>
-        <p><a href="services/employee/getEmployeeDetails" class="btn btn-success">Get Employee Details</a></p>
+        <h4>⚙️ Services</h4>
+        <a href="services/employee/getEmployeeDetails"
+           class="btn btn-success mt-2">
+           Get Employee Details
+        </a>
     </div>
 
 </div>
 
 <footer>
-    <p>© 2024 KK FUNDA Training & Development Center</p>
-    <p><small>Powered by <a href="https://google.com/">KK FUNDA</a></small></p>
+    <p>© 2026 KK FUNDA</p>
+    <small>Powered by DevOps Training</small>
 </footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
