@@ -127,9 +127,7 @@
     <artifactId>maven-war-plugin</artifactId>
     <version>3.4.0</version>
 </plugin>
-
-
-			<plugin>
+<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
 				<version>9.2.11.v20150529</version>
@@ -152,8 +150,7 @@
 					<wtpContextName>maven-web-application</wtpContextName>
 				</configuration>
 			</plugin>
-  </plugins>
-</build>
+			
 </plugins>
 	</build>
 	
