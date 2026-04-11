@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>KK FUNDA Home Page</title>
+<title>Praveen Pathange Home Page</title>
 <link href="images/kkfunda.jpg" rel="icon">
 <!-- Bootstrap CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -78,7 +78,7 @@
         <h4>KK FUNDA</h4>
         <p><b>Address:</b> Kukatpally, Hyderabad</p>
         <p><b>Phone:</b> +91-9951232881</p>
-        <p><b>Email:</b> <a href="mailto:kkeducationblr@gmail.com">kkeducationblr@gmail.com</a></p>
+        <p><b>Email:</b> <a href="mailto::praveenrao556@gmail.com">:praveenrao556@gmail.com</a></p>
         <a href="mailto:praveenrao556@gmail.com" class="btn btn-primary mt-2">📧 Mail to KK FUNDA</a>
     </div>
 
