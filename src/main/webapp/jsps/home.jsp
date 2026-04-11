@@ -46,7 +46,7 @@
 <body>
 
 <header>
-    <h1>🚀 Welcome to KK FUNDA YOUTUBE CHANNEL NEW BATCH ON JAN 25th</h1>
+    <h1>🚀 Welcome to Praveen Pathange CHANNEL NEW BATCH ON Apr 20th</h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
