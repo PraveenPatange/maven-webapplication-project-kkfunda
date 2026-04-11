@@ -47,7 +47,7 @@
 
 <header>
     <h1>🚀 Welcome to Praveen Pathange CHANNEL NEW BATCH ON Apr 20th</h1>
-    <h3>Training | Development | Consulting</h3>
+    <h3>Training | Development For Devops GCP SRE| Consulting</h3>
 </header>
 
 <div class="container">
