@@ -79,7 +79,7 @@
         <p><b>Address:</b> Kukatpally, Hyderabad</p>
         <p><b>Phone:</b> +91-9951232881</p>
         <p><b>Email:</b> <a href="mailto:kkeducationblr@gmail.com">kkeducationblr@gmail.com</a></p>
-        <a href="mailto:kkeducation@gmail.com" class="btn btn-primary mt-2">📧 Mail to KK FUNDA</a>
+        <a href="mailto:praveenrao556@gmail.com" class="btn btn-primary mt-2">📧 Mail to KK FUNDA</a>
     </div>
 
     <!-- Service Links -->
