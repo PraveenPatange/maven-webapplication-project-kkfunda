@@ -71,7 +71,7 @@ footer a {
 <body>
 
 <header>
-    <h1>🚀 DevOps Training Portal</h1>
+    <h1>🚀 DevOps MLops Training Portal</h1>
     <p>GCP | AWS | SRE | Real-Time Training</p>
 </header>
 
