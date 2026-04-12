@@ -122,7 +122,7 @@ footer a {
 </div>
 
 <footer>
-    <p>© 2026 PRAVEEN FUNDA</p>
+    <p>© 2026 PRAVEEN Empire</p>
     <small>Powered by DevOps Training</small>
 </footer>
 
