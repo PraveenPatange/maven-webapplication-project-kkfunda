@@ -41,8 +41,8 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(
                     credentialsId: 'nexus-creds',
-                    usernameVariable: 'NEXUS_USER',
-                    passwordVariable: 'NEXUS_PASS'
+                    usernameVariable: 'admin',
+                    passwordVariable: 'password'
                 )]) {
                     sh "mvn deploy -Dnexus.username=$NEXUS_USER -Dnexus.password=$NEXUS_PASS"
                 }
@@ -69,8 +69,8 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(
                     credentialsId: 'tomcat-creds',
-                    usernameVariable: 'TOMCAT_USER',
-                    passwordVariable: 'TOMCAT_PASS'
+                    usernameVariable: 'Praveen',
+                    passwordVariable: 'Sawrd1989#'
                 )]) {
                     sh """
                     curl -u $TOMCAT_USER:$TOMCAT_PASS \
