@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Praveen Pathange |GCP DevOps Engineer</title>
+<title>Praveen Pathange |GCP AWS DevOps Engineer</title>
 
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -75,7 +75,7 @@
 <body>
 
 <header>
-    <h1>🚀 Welcome to My DevOps Portfolio</h1>
+    <h1>🚀 Welcome to My GCP DevOps Portfolio</h1>
     <p>Hi, I'm <span class="highlight">Praveen Pathange</span> | DevOps Engineer</p>
 </header>
 
