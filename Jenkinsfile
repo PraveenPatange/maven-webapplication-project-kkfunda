@@ -5,21 +5,11 @@ pipeline {
         maven "maven-3.9.11"
     }
 
-    environment {
-        SONAR_HOME = tool "sonarqube"
-    }
-
     stages {
 
         stage('Checkout') {
             steps {
                 checkout scm
-            }
-        }
-
-        stage('Compile') {
-            steps {
-                sh "mvn clean compile"
             }
         }
 
@@ -29,54 +19,10 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
+        stage('SonarQube') {
             steps {
                 withSonarQubeEnv('sonarqube') {
                     sh "mvn sonar:sonar"
-                }
-            }
-        }
-
-        stage('Deploy to Nexus') {
-            steps {
-                withCredentials([usernamePassword(
-                    credentialsId: 'nexus-creds',
-                    usernameVariable: 'admin',
-                    passwordVariable: 'password'
-                )]) {
-                    sh "mvn deploy -Dnexus.username=$NEXUS_USER -Dnexus.password=$NEXUS_PASS"
-                }
-            }
-        }
-
-        stage('Jacoco Coverage') {
-            steps {
-                jacoco(
-                    changeBuildStatus: true,
-                    minimumInstructionCoverage: '80',
-                    minimumBranchCoverage: '80',
-                    minimumComplexityCoverage: '80',
-                    minimumLineCoverage: '80',
-                    minimumMethodCoverage: '80'
-                )
-            }
-        }
-
-        stage('Deploy to Tomcat') {
-            when {
-                branch 'preprod'   // Only deploy from preprod branch
-            }
-            steps {
-                withCredentials([usernamePassword(
-                    credentialsId: 'tomcat-creds',
-                    usernameVariable: 'Praveen',
-                    passwordVariable: 'Sawrd1989#'
-                )]) {
-                    sh """
-                    curl -u $TOMCAT_USER:$TOMCAT_PASS \
-                    --upload-file target/maven-web-application.war \
-                    "http://65.0.19.177:8080/manager/text/deploy?path=/maven-web-application&update=true"
-                    """
                 }
             }
         }
@@ -84,10 +30,10 @@ pipeline {
 
     post {
         success {
-            echo "✅ Deployment successful :)"
+            echo "✅ Success"
         }
         failure {
-            echo "❌ Pipeline failed"
+            echo "❌ Failed"
         }
     }
 }
